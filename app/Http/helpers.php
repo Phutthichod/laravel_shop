@@ -16,7 +16,7 @@ function showTable(array $header, array $data){
         }
         echo "</tr>";
     }
-    echo "</tbody>";
+
     echo "</table>";
 }
 ?>

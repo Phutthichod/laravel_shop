@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     private $price;
+    public static $prodList = array();
     public function getPrice(){
         return $this->product_price;
     }
@@ -21,5 +22,8 @@ class Product extends Model
         }
         return $product;
     }
+    // public function toJSON(){
+    //     return json_encode(self::$prodList);
+    // }
 
 }

@@ -20,10 +20,12 @@ Route::get('/', function () {
 Route::get('/index', 'IndexController@index');
 Route::post('/index', 'IndexController@login');
 Route::get('/cart','ProductController@index');
+Route::get('/product',"ProductController@toJSON");
 Route::get('/home','ProfileController@index');
 Route::get('/logout','LogoutController@index');
 Route::post('/','IndexController@login');
-Route::post('/cart','CheckoutController@checkout');
+Route::post('/checkout','CheckoutController@index');
+Route::get('/productList','CheckoutController@toJSON');
 // Route::get('members', function() {
 //     $users = Member::all();
 //     return View::make('index',array('allMembers' => $users));
